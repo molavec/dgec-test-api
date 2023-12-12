@@ -1,9 +1,12 @@
 NAME = 'test api'
 DESCRIPTION = 'Un API creado con Fast API'
 
-install:
-		pipenv install
+shell:
+	pipenv shell
 
-run:
-		uvicorn main:app --reload
+install:
+	pipenv install
+
+dev:
+	uvicorn main:app --reload
 
