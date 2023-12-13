@@ -26,4 +26,4 @@ async def programs():
 
 @app.get("/programs/{itemId}", response_class=ORJSONResponse)
 async def programs(itemId: int):
-  return ORJSONResponse([d for d in programsData.programs if d['id'] in [itemId]])
+  return ORJSONResponse(*[d for d in programsData.programs if d['id'] in [itemId]])
