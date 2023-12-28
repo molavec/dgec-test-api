@@ -15,6 +15,10 @@ class SectionEnum(Enum):
 programs = [
     {
       'id': 1,
+      'siga_program_code': 2, 
+      'banner_program_code': 'banner_code', 
+      'banner_majr_code': 'banner_code_majr', 
+      'version': 1, 
       'name': 'Diploma en Higiene Ocupacional Concepción',
       'level_type': {
         'id': 1,
@@ -29,6 +33,7 @@ programs = [
       'program_amount': 2100000,
       'registration_amount': 100000,
       'modality_type_name': 'Online',
+      'discount_text': '15% con inscripción temprana. 25% ex alumnos y ex alumnos IPRLA.',
       'modules': [
         {
           'id': 1,
