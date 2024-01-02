@@ -1,6 +1,7 @@
 import datetime
 from enum import Enum
 
+
 class SectionEnum(Enum):
   FEATURED_IMAGE = 'FEATURED_IMAGE'
   CONTACT_INFO = 'CONTACT_INFO'
@@ -12,247 +13,543 @@ class SectionEnum(Enum):
   ADMISSION_INFO = 'ADMISSION_INFO'
   BROCHURE = 'BROCHURE'
 
+
 programs = [
     {
-      'id': 1,
-      'siga_program_code': 2, 
-      'banner_program_code': 'banner_code', 
-      'banner_majr_code': 'banner_code_majr', 
-      'version': 1, 
-      'name': 'Diploma en Higiene Ocupacional Concepción',
-      'level_type': {
-        'id': 1,
-        'name': 'Diploma',
-      },
-      'start_date': datetime.datetime(2024, 3, 1),
-      'end_date': datetime.datetime(2024, 3, 1),
-      'duration_value': 152,
-      'duration_type_name': 'horas',
-      'place': 'Aula virtual UTFSM',
-      'quotas': 60,
-      'program_amount': 2100000,
-      'registration_amount': 100000,
-      'modality_type_name': 'Online',
-      'discount_text': '15% con inscripción temprana. 25% ex alumnos y ex alumnos IPRLA.',
-      'modules': [
-        {
-          'id': 1,
-          'seq_number': 1,
-          'description': 'Modulo I: Lugar de Trabajo',
-          'hours': 10,
-        },
-        {
-          'id': 2,
-          'seq_number': 2,
-          'description': 'Modulo II: Factores Ambientales',
-          'hours': 20,
-        },
-        {
-          'id': 3,
-          'seq_number': 3,
-          'description': 'Modulo III: Control de Ingeniería',
-          'hours': 30,
-        },
-      ],
-      'sections': [
-        {
-          'id': 1,
-          'section_type': {
-            'name': 'Main image',
-            'type': SectionEnum.FEATURED_IMAGE,
-            'seq_number': 1,
-          },
-          'seq_number': 1,
-          'text': '',
-          'publish': datetime.datetime(2024, 3, 1),
-          'attached_files': [
+        "PROGRAM_ID": 23,
+        "PROGRAM_NAME": "Diploma en Integridad Mecánica de Equipos Estáticos de Procesos Industriales",
+        "PROGRAM_DESC": "(Estanques, Sistema de Piping, Dispositivos de Alivio)",
+        "SIGA_PROGRAM_CODE": 271,
+        "BANNER_PROGRAM_CODE": None,
+        "BANNER_MAJR_CODE": None,
+        "PROGRAM_TYPES_ID": 2,
+        "PROGRAM_TYPE_NAME": "Diploma",
+        "PUBLISH": "SI",
+        "IS_FEATURED": "NO",
+        "SIGA_PLAN_NAME": None,
+        "PROGRAM_VERSION_ID": 23,
+        "IMPART_TYPES_ID": 1,
+        "IMPART_TYPE_NAME": "Abierto",
+        "MODALITY_TYPES_ID": 1,
+        "MODALITY_TYPE_NAME": "Profesional",
+        "MODALITY_TYPE_DESC": None,
+        "SIGA_COD_JORNADA": 1,
+        "SIGA_COD_SEDE": 1,
+        "SIGA_COD_DEPARTAMENTO": 21,
+        "MEMO_AUTHORIZATION": None,
+        "NUMBER_VERSION": 1,
+        "START_DATE": "2023-12-22T00:00:00",
+        "END_DATE": "2024-12-22T00:00:00",
+        "DURATION_VALUE": 250,
+        "DURATION_TYPES_ID": 1,
+        "DURATION_TYPE_NAME": "Horas",
+        "DURATION_TEXT": None,
+        "SIGA_PERIOD": None,
+        "DGEC_CODE": None,
+        "QUOTAS": 0,
+        "LEAST_ENROLLMENT_VALUE": 0,
+        "PROGRAM_AMOUNT": 0,
+        "REGISTRATION_AMOUNT": 0,
+        "BANNER_ORGN_CODE": None,
+        "BANNER_DETAIL_CODE": None,
+        "DISTRIBUTION_PERCENT": None,
+        "DISCOUNT_TEXT": None,
+        "RECORD_STATE": "E",
+        "SEND_DATE": "2023-12-27T09:26:27",
+        "PROGRAM_VALIDATION_STATE": 1,
+        "VERSION_VALIDATION_STATE": 1,
+        "SECTIONS": [
             {
-              'id': '1',
-              'file_name': 'p/Higiene-ocupacional.png',
-              'file_type_name': 'PNG',
-              'text': 'Higiene Ocupacional',
-              'link': '/temp/Higiene-ocupacional.png',
+                "NAME": "Información General del Programa",
+                "TEXT": "<p>La Integridad Mecánica de equipos es una filosofía de trabajo que tiene por objeto garantizar que todo equipo (de proceso, eléctrico, de instrumentación y control, seguridad, entre otros), sea diseñado, fabricado, instalado, operado, mantenido, y/o reemplazado oportunamente para prevenir fallas, accidentes o riesgos a personas, instalaciones y al ambiente, estableciendo los criterios basados en datos históricos, normas y regulaciones nacionales e internacionales.</p><p>&nbsp;</p><p>La Gestión de la integridad de equipos en los Procesos se puede definir como la aplicación metodológica de sistemas de gestión y de control, de una forma tal que todos los riesgos existentes y potenciales sean identificados, analizados, evaluados y controlados, con la finalidad de prevenir cualquier tipo de incidente que pueda afectar a los procesos.</p>",
+                "PUBLISH": "SI",
+                "SEQ_NUMBER": 2,
+                "FILE_NAME": None,
+                "BUTTON_TEXT": None,
+                "LINK": None
             },
-          ],
-        },
-        {
-          'id': 2,
-          'section_type': {
-            'name': 'Requisitos',
-            'type': SectionEnum.REQUIREMENTS,
-            'seq_number': 2,
-          },
-          'seq_number': 2,
-          'text': 'Título Profesional o Título Técnico Nivel Superior',
-          'publish': datetime.datetime(2024, 3, 1),
-          'attached_files': [],
-        },
-        {
-          'id': 3,
-          'section_type': {
-            'name': 'Más Información',
-            'type': SectionEnum.CONTACT_INFO,
-            'seq_number': 3,
-          },
-          'seq_number': 3,
-          'text': 'educacion.continua@usm.cl',
-          'publish': datetime.datetime(2024, 3, 1),
-          'attached_files': [],
-        },
-        {
-          'id': 4,
-          'section_type': {
-            'name': 'Información General',
-            'type': SectionEnum.GENERAL_INFO,
-            'seq_number': 4,
-          },
-          'seq_number': 4,
-          'text': """El Diploma en Higiene Ocupacional es un programa diseñado para proporcionar las habilidades necesarias a los profesionales que deseen evaluar ambientes de trabajo donde se encuentren presentes agentes químicos, físicos y biológicos, así como abordar temas relacionados con los factores humanos.
-
- 
-
-          El objetivo principal del programa es mejorar las condiciones de trabajo de las personas. Este diploma es una oportunidad para actualizar a los profesionales en esta área y contribuir de manera efectiva en la mejora de los ambientes de trabajo, aumentando así la productividad en las organizaciones.""",
-          'publish': datetime.datetime(2024, 3, 1),
-          'attached_files': [],
-        },
-        {
-          'id': 5,
-          'section_type': {
-            'name': 'Objetivo General',
-            'type': SectionEnum.GENERAL_GOAL,
-            'seq_number': 5,
-          },
-          'seq_number': 5,
-          'text': 'Entregar las competencias para todo aquel profesional, que desee desempeñarse evaluando ambientes de trabajo, en el cual se encuentren presentes agentes: químicos, físicos y biológicos, inclusive abordar temáticas relacionadas con los factores humanos, mejorando con ello las condiciones de trabajo de las personas.',
-          'publish': datetime.datetime(2024, 3, 1),
-          'attached_files': [],
-        },
-        {
-          'id': 6,
-          'section_type': {
-            'name': 'A quién va dirigido',
-            'type': SectionEnum.TARGET_AUDIENCES,
-            'seq_number': 6,
-          },
-          'seq_number': 6,
-          'text': 'Profesionales que deseen profundizar sus conocimientos en el ámbito Higiene Ocupacional ',
-          'publish': datetime.datetime(2024, 3, 1),
-          'attached_files': [],
-        },
-        {
-          'id': 7,
-          'section_type': {
-            'name': 'Staff de Profesores',
-            'type': SectionEnum.STAFF,
-            'seq_number': 7,
-          },
-          'seq_number': 7,
-          'text': """María Eliana Tobar Garziglia
-          Carlos Andrés Ibarra Villanueva
-          Christian Eduardo Albornoz Villagra
-          Alfonso Enrique Espinoza Leyton
-          Rolando Eduardo Vilasau Domínguez
-          Rodrigo Domínguez Carmona
-          Juan Carlos Valenzuela Illanes
-          Juan Leopoldo Ferruz Rojas
-          David Eduardo Escanilla Camus
-          Víctor Hugo Lizama Molina
-          Denis Riquelme Sandoval""",
-          'publish': datetime.datetime(2024, 3, 1),
-          'attached_files': [],
-        },
-        {
-          'id': 8,
-          'section_type': {
-            'name': 'Proceso de Admisión',
-            'type': SectionEnum.ADMISSION_INFO,
-            'seq_number': 8,
-          },
-          'seq_number': 8,
-          'text': 'Si deseas más información sobre el proceso de admisión puedes escribir a: carlos.bizamaf@usm.cl o educacion.continua@usm.cl',
-          'publish': datetime.datetime(2024, 3, 1),
-          'attached_files': [],
-        },
-        {
-          'id': 9,
-          'section_type': {
-            'name': 'Proceso de Admisión',
-            'type': SectionEnum.BROCHURE,
-            'seq_number': 9,
-          },
-          'seq_number': 9,
-          'text': '',
-          'publish': datetime.datetime(2024, 3, 1),
-          'attached_files': [
             {
-              'id': '1',
-              'file_name': 'Diploma-en-Gestion-Estrategica-2023.pdf',
-              'file_type_name': 'PDF',
-              'text': 'Diploma en Gestion Estrategica 2023',
-              'link': 'https://educacioncontinua.usm.cl/wp-content/uploads/2023/01/Diploma-en-Gestion-Estrategica-2023.pdf',
+                "NAME": "Objetivo General del Programa",
+                "TEXT": "<ul><li>La integridad Mecánica es el proceso de garantizar que los equipos sean fabricados con los materiales adecuados de construcción y, además, sean correctamente instalados, mantenidos y reemplazados para evitar fallas y daños ambientales.</li><li>La existencia y aplicación de procedimientos escritos, que deben incluir métodos que faciliten que los empleados identifiquen y reporten equipos potencialmente defectuosos o inseguros y, además, que similarmente puedan registrar sus observaciones y sugerencias.</li><li>Establecer e implementar la correcta y completa formación de los empleados en todas las actividades de operación y mantenimiento.</li><li>El diseño de un programa de inspecciones y pruebas para todos los equipos de proceso. Estos procedimientos para inspecciones y pruebas deben seguir reconocidas y generalmente aceptadas buenas prácticas de ingeniería, con una frecuencia coherente con las recomendaciones del fabricante o según lo determine el historial de funcionamiento del equipo y su evaluación en función del riesgo.</li><li>La creación de un programa de aseguramiento de la calidad para comprobar la idoneidad de los equipos durante el proceso de construcción de la instalación, su modificación o reparación, su adecuada instalación y finalmente, la existencia de partes y repuestos que cumplan con códigos aplicables y especificaciones de diseño para el apropiado mantenimiento de dichos equipos.</li></ul>",
+                "PUBLISH": "SI",
+                "SEQ_NUMBER": 3,
+                "FILE_NAME": None,
+                "BUTTON_TEXT": None,
+                "LINK": None
             },
-          ],
-        },
-      ],
-      'managers': [
-        {
-          'id': 1,
-          'last_name': 'Hurtado',
-          'first_name': 'Marcela',
-          'profile': """El patrimonio cultural, representado por sus múltiples expresiones, se entiende cada vez más integrado a la vida cotidiana de las personas, jugando un papel importante como factor de cohesión social. En particular, el patrimonio arquitectónico y urbano constituye una de las categorías más significativas por las oportunidades que ofrece de albergar diversas actividades, de ser portador de la memoria de los pueblos y de configurar la imagen de nuestras ciudades y asentamientos en general. Gran parte de estos bienes son públicos y tienen, por tanto, una fuerte vocación de uso público, lo que contribuye a conectar a las comunidades con su historia y sus tradiciones. 
+            {
+                "NAME": "A quién va Dirigido",
+                "TEXT": "<p>El Diploma está dirigido a mantenedores, operadores, técnicos y profesionales de los diversos sectores industriales que se desempeñan en el área de mantenimiento y producción, y para todos aquellos interesados en la temática de integridad mecánica de equipos con la ayuda de los programas y planes mantenimiento predictivo/preventivo.</p>",
+                "PUBLISH": "SI",
+                "SEQ_NUMBER": 4,
+                "FILE_NAME": None,
+                "BUTTON_TEXT": None,
+                "LINK": None
+            },
+            {
+                "NAME": "Staff de Profesores",
+                "TEXT": "<ul><li>Ing. Sr. Guillermo Larson M.</li><li>Ing. Sr. Marcelo Quiroz N.</li><li>Ing. Sr. Ariel Zoñez R.</li><li>Ing. Sr. Oscar Castro C.</li></ul>",
+                "PUBLISH": "SI",
+                "SEQ_NUMBER": 7,
+                "FILE_NAME": None,
+                "BUTTON_TEXT": None,
+                "LINK": None
+            },
+            {
+                "NAME": "Proceso de Admisión",
+                "TEXT": "<p>Para más información de admisión, escribir a educacion.continua@usm.cl</p>",
+                "PUBLISH": "SI",
+                "SEQ_NUMBER": 8,
+                "FILE_NAME": None,
+                "BUTTON_TEXT": None,
+                "LINK": None
+            },
+            {
+                "NAME": "Más información",
+                "TEXT": "pamela.araya@usm.cl",
+                "PUBLISH": "SI",
+                "SEQ_NUMBER": 9,
+                "FILE_NAME": None,
+                "BUTTON_TEXT": None,
+                "LINK": None
+            },
+            {
+                "NAME": "Lugar",
+                "TEXT": "Plataforma Zoom",
+                "PUBLISH": "SI",
+                "SEQ_NUMBER": 10,
+                "FILE_NAME": None,
+                "BUTTON_TEXT": None,
+                "LINK": None
+            }
+        ],
+        "DIRECTORS": [
+            {
+                "ID": 1,
+                "PROGRAM_VERSIONS_ID": 23,
+                "PEOPLE_TYPES_ID": 1,
+                "NAME": "Director de Programa",
+                "BANNER_SPRIDEN_ID": "92601862",
+                "FIRST_NAME": "Marcelo",
+                "LAST_NAME": "Quiroz Neira",
+                "POSITION": None,
+                "SOCIAL_MEDIA_LINK": None,
+                "FILE_NAME": None,
+                "BUTTON_TEXT": None,
+                "TEXT": "<p>El mantenimiento es una de las actividades que influye directamente en la producción, en los costos globales de la actividad productiva, en los clientes, en la seguridad y en el medio ambiente.</p><p>&nbsp;</p><p>La integridad Mecánica es el proceso de garantizar que los equipos sean fabricados con los materiales adecuados de construcción y, además, sean correctamente instalados, mantenidos y reemplazados para evitar fallas y daños ambientales.</p>"
+            },
+            {
+                "ID": 2,
+                "PROGRAM_VERSIONS_ID": 23,
+                "PEOPLE_TYPES_ID": 1,
+                "NAME": "Director de Programa",
+                "BANNER_SPRIDEN_ID": "150969441",
+                "FIRST_NAME": "Catherine",
+                "LAST_NAME": "Tessini",
+                "POSITION": None,
+                "SOCIAL_MEDIA_LINK": None,
+                "FILE_NAME": None,
+                "BUTTON_TEXT": None,
+                "TEXT": "<p>PRUEBA 2: El mantenimiento es una de las actividades que influye directamente en la producción, en los costos globales de la actividad productiva, en los clientes, en la seguridad y en el medio ambiente.</p><p>&nbsp;</p><p>La integridad Mecánica es el proceso de garantizar que los equipos sean fabricados con los materiales adecuados de construcción y, además, sean correctamente instalados, mantenidos y reemplazados para evitar fallas y daños ambientales.</p>"
+            }
+        ],
+        "MODULES": [
+            {
+                "ID": 1,
+                "PROGRAM_PLANS_ID": None,
+                "SEQ_NUMBER": 1,
+                "LEVEL_NUMBER": None,
+                "DESCRIPTION": None,
+                "HOURS": 5,
+                "SIGA_MNEMONIC": None,
+                "SIGA_SCT_CREDIT": None,
+                "SIGA_PLAN_LEVEL": None
+            },
+            {
+                "ID": 3,
+                "PROGRAM_PLANS_ID": None,
+                "SEQ_NUMBER": 3,
+                "LEVEL_NUMBER": None,
+                "DESCRIPTION": None,
+                "HOURS": 40,
+                "SIGA_MNEMONIC": None,
+                "SIGA_SCT_CREDIT": None,
+                "SIGA_PLAN_LEVEL": None
+            },
+            {
+                "ID": 4,
+                "PROGRAM_PLANS_ID": None,
+                "SEQ_NUMBER": 4,
+                "LEVEL_NUMBER": None,
+                "DESCRIPTION": None,
+                "HOURS": 40,
+                "SIGA_MNEMONIC": None,
+                "SIGA_SCT_CREDIT": None,
+                "SIGA_PLAN_LEVEL": None
+            },
+            {
+                "ID": 5,
+                "PROGRAM_PLANS_ID": None,
+                "SEQ_NUMBER": 5,
+                "LEVEL_NUMBER": None,
+                "DESCRIPTION": None,
+                "HOURS": 40,
+                "SIGA_MNEMONIC": None,
+                "SIGA_SCT_CREDIT": None,
+                "SIGA_PLAN_LEVEL": None
+            },
+            {
+                "ID": 6,
+                "PROGRAM_PLANS_ID": None,
+                "SEQ_NUMBER": 6,
+                "LEVEL_NUMBER": None,
+                "DESCRIPTION": None,
+                "HOURS": 30,
+                "SIGA_MNEMONIC": None,
+                "SIGA_SCT_CREDIT": None,
+                "SIGA_PLAN_LEVEL": None
+            }
+        ],
+        "PAYMENT_TYPES": [],
+        "REQUIREMENTS": [
+            {
+                "ID": 1,
+                "PROGRAM_VERSIONS_ID": 23,
+                "REQUIREMENT_TYPES_ID": 1,
+                "NAME": "CI",
+                "DESCRIPTION": "copia de cédula de identidad ambos lados"
+            },
+            {
+                "ID": 3,
+                "PROGRAM_VERSIONS_ID": 23,
+                "REQUIREMENT_TYPES_ID": 2,
+                "NAME": "CV",
+                "DESCRIPTION": "actualizado"
+            },
+            {
+                "ID": 2,
+                "PROGRAM_VERSIONS_ID": 23,
+                "REQUIREMENT_TYPES_ID": 11,
+                "NAME": "Copia Título Profesional carrera mínimo 4 semestres,",
+                "DESCRIPTION": None
+            }
+        ],
+        "DISCOUNTS": [
+            {
+                "ID": 4,
+                "PROGRAM_VERSIONS_ID": 23,
+                "DISCOUNT_TYPES_ID": 9,
+                "NAME": "Académicos, docentes, funcionarios USM",
+                "DESCRIPTION": None,
+                "PERCENT": 10,
+                "OTRO_DESCUENTO": None
+            },
+            {
+                "ID": 1,
+                "PROGRAM_VERSIONS_ID": 23,
+                "DISCOUNT_TYPES_ID": 7,
+                "NAME": "Alumnos y ex alumnos Departamento Mecánica USM Sede Concepción",
+                "DESCRIPTION": None,
+                "PERCENT": 20,
+                "OTRO_DESCUENTO": None
+            },
+            {
+                "ID": 2,
+                "PROGRAM_VERSIONS_ID": 23,
+                "DISCOUNT_TYPES_ID": 8,
+                "NAME": "Descuento inscripción durante julio/agosto",
+                "DESCRIPTION": None,
+                "PERCENT": 10,
+                "OTRO_DESCUENTO": None
+            },
+            {
+                "ID": 3,
+                "PROGRAM_VERSIONS_ID": 23,
+                "DISCOUNT_TYPES_ID": 1,
+                "NAME": "Ex-Alumnos USM",
+                "DESCRIPTION": "ser exalumno de la Universidad, cualquier título, grado o diplomas",
+                "PERCENT": 10,
+                "OTRO_DESCUENTO": None
+            },
+            {
+                "ID": 5,
+                "PROGRAM_VERSIONS_ID": 23,
+                "DISCOUNT_TYPES_ID": 10,
+                "NAME": "Pago contado",
+                "DESCRIPTION": None,
+                "PERCENT": 10,
+                "OTRO_DESCUENTO": None
+            }
+        ]
+    }
 
-          La gestión y el manejo de este valioso patrimonio recae en muchas ocasiones en instituciones y organismos públicos que deben hacer frente a diversos factores que amenazan su preservación en el tiempo: la natural degradación física, la obsolescencia funcional frente a las nuevas demandas, los elevados costos de mantenimiento, además de aquellos derivados de eventos naturales como sismos o, cada vez más preocupante, el impacto del cambio climático. Si bien existen desde el Estado iniciativas que dan cabida a proyectos que buscan rescatar este tipo de bienes culturales, no existe a la fecha un conocimiento generalizado de éstas, que dé espacio a formulación de propuestas de manera más extendida en el país. 
-          
-          Desde este diagnóstico, el presente Diplomado apunta a fortalecer las capacidades de profesionales y técnicos, principalmente de organismos públicos, pero también del sector privado, que tienen entre sus responsabilidades la búsqueda de alternativas para la salvaguardia y preservación de patrimonio arquitectónico y/o urbano. El foco está puesto, por tanto, en profundizar en el conocimiento de los procesos que llevan a la formulación de proyectos, en sus distintas fases y características, a partir de fundamentos teóricos, experiencias exitosas y ejercicios prácticos. """,
-          'prefix': 'Dra.',
-          'linkedin': 'https://www.linkedin.com/in/marcela-hurtado-61692539/',
-          'image':
-            'https://educacioncontinua.usm.cl/wp-content/uploads/2023/01/Marcela-Hurtado.png',
-        },
-        {
-          'id': 2,
-          'last_name': 'Boris',
-          'first_name': 'Uribe Améstica',
-          'profile': """Estimado Postulante:
+]
 
- 
 
-          Es un placer dirigirme a ustedes para presentarles el programa de Diploma en Higiene Ocupacional, del cual tengo el honor de ser el director. Mi nombre es Boris Uribe Améstica y quiero darles la más cordial bienvenida a nuestro programa.
-          
-           
-          
-          Desde su creación, hemos tenido el privilegio de realizar 8 exitosas versiones, lo que nos ha permitido consolidarnos como referentes en el campo de la higiene ocupacional. Nuestro principal objetivo es brindarle a nuestros estudiantes una formación integral y de calidad, que les permita enfrentar los desafíos y exigencias del mundo laboral.
-          
-           
-          
-          Contamos con un equipo de profesionales altamente capacitados en cada una de las temáticas del programa, quienes estarán encantados de compartir sus conocimientos y experiencia con ustedes. Nuestro compromiso es garantizarles una educación de excelencia, que les permita adquirir las habilidades y competencias necesarias para desempeñarse de manera eficiente en el ámbito de la higiene ocupacional.
-          
-           
-          
-          Les invitamos a formar parte de nuestra comunidad académica y a aprovechar al máximo todas las oportunidades que nuestro programa tiene para ofrecerles. Estamos seguros de que esta experiencia será enriquecedora y les permitirá alcanzar sus metas profesionales.""",
-          'prefix': '',
-          'linkedin': '',
-          'image':
-            'https://educacioncontinua.usm.cl/wp-content/uploads/2023/01/boris-uribe.png',
-        },
-      ],
-      'payment_methods': [
+program = {
+    "PROGRAM_ID": 23,
+    "PROGRAM_NAME": "Diploma en Integridad Mecánica de Equipos Estáticos de Procesos Industriales",
+    "PROGRAM_DESC": "(Estanques, Sistema de Piping, Dispositivos de Alivio)",
+    "SIGA_PROGRAM_CODE": 271,
+    "BANNER_PROGRAM_CODE": None,
+    "BANNER_MAJR_CODE": None,
+    "PROGRAM_TYPES_ID": 2,
+    "PROGRAM_TYPE_NAME": "Diploma",
+    "PUBLISH": "SI",
+    "IS_FEATURED": "NO",
+    "SIGA_PLAN_NAME": None,
+    "PROGRAM_VERSION_ID": 23,
+    "IMPART_TYPES_ID": 1,
+    "IMPART_TYPE_NAME": "Abierto",
+    "MODALITY_TYPES_ID": 1,
+    "MODALITY_TYPE_NAME": "Profesional",
+    "MODALITY_TYPE_DESC": None,
+    "SIGA_COD_JORNADA": 1,
+    "SIGA_COD_SEDE": 1,
+    "SIGA_COD_DEPARTAMENTO": 21,
+    "MEMO_AUTHORIZATION": None,
+    "NUMBER_VERSION": 1,
+    "START_DATE": "2023-12-22T00:00:00",
+    "END_DATE": "2024-12-22T00:00:00",
+    "DURATION_VALUE": 250,
+    "DURATION_TYPES_ID": 1,
+    "DURATION_TYPE_NAME": "Horas",
+    "DURATION_TEXT": None,
+    "SIGA_PERIOD": None,
+    "DGEC_CODE": None,
+    "QUOTAS": 0,
+    "LEAST_ENROLLMENT_VALUE": 0,
+    "PROGRAM_AMOUNT": 0,
+    "REGISTRATION_AMOUNT": 0,
+    "BANNER_ORGN_CODE": None,
+    "BANNER_DETAIL_CODE": None,
+    "DISTRIBUTION_PERCENT": None,
+    "DISCOUNT_TEXT": None,
+    "RECORD_STATE": "E",
+    "SEND_DATE": "2023-12-27T09:26:27",
+    "PROGRAM_VALIDATION_STATE": 1,
+    "VERSION_VALIDATION_STATE": 1,
+    "SECTIONS": [
         {
-          'id': 1,
-          'value': 1000, 
-          'method_type_name': 'Tarjeta de crédito',
+            "NAME": "Información General del Programa",
+            "TEXT": "<p>La Integridad Mecánica de equipos es una filosofía de trabajo que tiene por objeto garantizar que todo equipo (de proceso, eléctrico, de instrumentación y control, seguridad, entre otros), sea diseñado, fabricado, instalado, operado, mantenido, y/o reemplazado oportunamente para prevenir fallas, accidentes o riesgos a personas, instalaciones y al ambiente, estableciendo los criterios basados en datos históricos, normas y regulaciones nacionales e internacionales.</p><p>&nbsp;</p><p>La Gestión de la integridad de equipos en los Procesos se puede definir como la aplicación metodológica de sistemas de gestión y de control, de una forma tal que todos los riesgos existentes y potenciales sean identificados, analizados, evaluados y controlados, con la finalidad de prevenir cualquier tipo de incidente que pueda afectar a los procesos.</p>",
+            "PUBLISH": "SI",
+            "SEQ_NUMBER": 2,
+            "FILE_NAME": None,
+            "BUTTON_TEXT": None,
+            "LINK": None
         },
-        
-      ],
-      'discounts': [
         {
-          'id': 1,
-          'discount_type_name': 'Inscripción temprana',
-          'percent': '15%',
-          'desciption': 'Descuento por inscripción temprana',
+            "NAME": "Objetivo General del Programa",
+            "TEXT": "<ul><li>La integridad Mecánica es el proceso de garantizar que los equipos sean fabricados con los materiales adecuados de construcción y, además, sean correctamente instalados, mantenidos y reemplazados para evitar fallas y daños ambientales.</li><li>La existencia y aplicación de procedimientos escritos, que deben incluir métodos que faciliten que los empleados identifiquen y reporten equipos potencialmente defectuosos o inseguros y, además, que similarmente puedan registrar sus observaciones y sugerencias.</li><li>Establecer e implementar la correcta y completa formación de los empleados en todas las actividades de operación y mantenimiento.</li><li>El diseño de un programa de inspecciones y pruebas para todos los equipos de proceso. Estos procedimientos para inspecciones y pruebas deben seguir reconocidas y generalmente aceptadas buenas prácticas de ingeniería, con una frecuencia coherente con las recomendaciones del fabricante o según lo determine el historial de funcionamiento del equipo y su evaluación en función del riesgo.</li><li>La creación de un programa de aseguramiento de la calidad para comprobar la idoneidad de los equipos durante el proceso de construcción de la instalación, su modificación o reparación, su adecuada instalación y finalmente, la existencia de partes y repuestos que cumplan con códigos aplicables y especificaciones de diseño para el apropiado mantenimiento de dichos equipos.</li></ul>",
+            "PUBLISH": "SI",
+            "SEQ_NUMBER": 3,
+            "FILE_NAME": None,
+            "BUTTON_TEXT": None,
+            "LINK": None
         },
-        
-      ],
-    },
-    
-  ];
+        {
+            "NAME": "A quién va Dirigido",
+            "TEXT": "<p>El Diploma está dirigido a mantenedores, operadores, técnicos y profesionales de los diversos sectores industriales que se desempeñan en el área de mantenimiento y producción, y para todos aquellos interesados en la temática de integridad mecánica de equipos con la ayuda de los programas y planes mantenimiento predictivo/preventivo.</p>",
+            "PUBLISH": "SI",
+            "SEQ_NUMBER": 4,
+            "FILE_NAME": None,
+            "BUTTON_TEXT": None,
+            "LINK": None
+        },
+        {
+            "NAME": "Staff de Profesores",
+            "TEXT": "<ul><li>Ing. Sr. Guillermo Larson M.</li><li>Ing. Sr. Marcelo Quiroz N.</li><li>Ing. Sr. Ariel Zoñez R.</li><li>Ing. Sr. Oscar Castro C.</li></ul>",
+            "PUBLISH": "SI",
+            "SEQ_NUMBER": 7,
+            "FILE_NAME": None,
+            "BUTTON_TEXT": None,
+            "LINK": None
+        },
+        {
+            "NAME": "Proceso de Admisión",
+            "TEXT": "<p>Para más información de admisión, escribir a educacion.continua@usm.cl</p>",
+            "PUBLISH": "SI",
+            "SEQ_NUMBER": 8,
+            "FILE_NAME": None,
+            "BUTTON_TEXT": None,
+            "LINK": None
+        },
+        {
+            "NAME": "Más información",
+            "TEXT": "pamela.araya@usm.cl",
+            "PUBLISH": "SI",
+            "SEQ_NUMBER": 9,
+            "FILE_NAME": None,
+            "BUTTON_TEXT": None,
+            "LINK": None
+        },
+        {
+            "NAME": "Lugar",
+            "TEXT": "Plataforma Zoom",
+            "PUBLISH": "SI",
+            "SEQ_NUMBER": 10,
+            "FILE_NAME": None,
+            "BUTTON_TEXT": None,
+            "LINK": None
+        }
+    ],
+    "DIRECTORS": [
+        {
+            "ID": 1,
+            "PROGRAM_VERSIONS_ID": 23,
+            "PEOPLE_TYPES_ID": 1,
+            "NAME": "Director de Programa",
+            "BANNER_SPRIDEN_ID": "92601862",
+            "FIRST_NAME": "Marcelo",
+            "LAST_NAME": "Quiroz Neira",
+            "POSITION": None,
+            "SOCIAL_MEDIA_LINK": None,
+            "FILE_NAME": None,
+            "BUTTON_TEXT": None,
+            "TEXT": "<p>El mantenimiento es una de las actividades que influye directamente en la producción, en los costos globales de la actividad productiva, en los clientes, en la seguridad y en el medio ambiente.</p><p>&nbsp;</p><p>La integridad Mecánica es el proceso de garantizar que los equipos sean fabricados con los materiales adecuados de construcción y, además, sean correctamente instalados, mantenidos y reemplazados para evitar fallas y daños ambientales.</p>"
+        },
+        {
+            "ID": 2,
+            "PROGRAM_VERSIONS_ID": 23,
+            "PEOPLE_TYPES_ID": 1,
+            "NAME": "Director de Programa",
+            "BANNER_SPRIDEN_ID": "150969441",
+            "FIRST_NAME": "Catherine",
+            "LAST_NAME": "Tessini",
+            "POSITION": None,
+            "SOCIAL_MEDIA_LINK": None,
+            "FILE_NAME": None,
+            "BUTTON_TEXT": None,
+            "TEXT": "<p>PRUEBA 2: El mantenimiento es una de las actividades que influye directamente en la producción, en los costos globales de la actividad productiva, en los clientes, en la seguridad y en el medio ambiente.</p><p>&nbsp;</p><p>La integridad Mecánica es el proceso de garantizar que los equipos sean fabricados con los materiales adecuados de construcción y, además, sean correctamente instalados, mantenidos y reemplazados para evitar fallas y daños ambientales.</p>"
+        }
+    ],
+    "MODULES": [
+        {
+            "ID": 1,
+            "PROGRAM_PLANS_ID": None,
+            "SEQ_NUMBER": 1,
+            "LEVEL_NUMBER": None,
+            "DESCRIPTION": None,
+            "HOURS": 5,
+            "SIGA_MNEMONIC": None,
+            "SIGA_SCT_CREDIT": None,
+            "SIGA_PLAN_LEVEL": None
+        },
+        {
+            "ID": 3,
+            "PROGRAM_PLANS_ID": None,
+            "SEQ_NUMBER": 3,
+            "LEVEL_NUMBER": None,
+            "DESCRIPTION": None,
+            "HOURS": 40,
+            "SIGA_MNEMONIC": None,
+            "SIGA_SCT_CREDIT": None,
+            "SIGA_PLAN_LEVEL": None
+        },
+        {
+            "ID": 4,
+            "PROGRAM_PLANS_ID": None,
+            "SEQ_NUMBER": 4,
+            "LEVEL_NUMBER": None,
+            "DESCRIPTION": None,
+            "HOURS": 40,
+            "SIGA_MNEMONIC": None,
+            "SIGA_SCT_CREDIT": None,
+            "SIGA_PLAN_LEVEL": None
+        },
+        {
+            "ID": 5,
+            "PROGRAM_PLANS_ID": None,
+            "SEQ_NUMBER": 5,
+            "LEVEL_NUMBER": None,
+            "DESCRIPTION": None,
+            "HOURS": 40,
+            "SIGA_MNEMONIC": None,
+            "SIGA_SCT_CREDIT": None,
+            "SIGA_PLAN_LEVEL": None
+        },
+        {
+            "ID": 6,
+            "PROGRAM_PLANS_ID": None,
+            "SEQ_NUMBER": 6,
+            "LEVEL_NUMBER": None,
+            "DESCRIPTION": None,
+            "HOURS": 30,
+            "SIGA_MNEMONIC": None,
+            "SIGA_SCT_CREDIT": None,
+            "SIGA_PLAN_LEVEL": None
+        }
+    ],
+    "PAYMENT_TYPES": [],
+    "REQUIREMENTS": [
+        {
+            "ID": 1,
+            "PROGRAM_VERSIONS_ID": 23,
+            "REQUIREMENT_TYPES_ID": 1,
+            "NAME": "CI",
+            "DESCRIPTION": "copia de cédula de identidad ambos lados"
+        },
+        {
+            "ID": 3,
+            "PROGRAM_VERSIONS_ID": 23,
+            "REQUIREMENT_TYPES_ID": 2,
+            "NAME": "CV",
+            "DESCRIPTION": "actualizado"
+        },
+        {
+            "ID": 2,
+            "PROGRAM_VERSIONS_ID": 23,
+            "REQUIREMENT_TYPES_ID": 11,
+            "NAME": "Copia Título Profesional carrera mínimo 4 semestres,",
+            "DESCRIPTION": None
+        }
+    ],
+    "DISCOUNTS": [
+        {
+            "ID": 4,
+            "PROGRAM_VERSIONS_ID": 23,
+            "DISCOUNT_TYPES_ID": 9,
+            "NAME": "Académicos, docentes, funcionarios USM",
+            "DESCRIPTION": None,
+            "PERCENT": 10,
+            "OTRO_DESCUENTO": None
+        },
+        {
+            "ID": 1,
+            "PROGRAM_VERSIONS_ID": 23,
+            "DISCOUNT_TYPES_ID": 7,
+            "NAME": "Alumnos y ex alumnos Departamento Mecánica USM Sede Concepción",
+            "DESCRIPTION": None,
+            "PERCENT": 20,
+            "OTRO_DESCUENTO": None
+        },
+        {
+            "ID": 2,
+            "PROGRAM_VERSIONS_ID": 23,
+            "DISCOUNT_TYPES_ID": 8,
+            "NAME": "Descuento inscripción durante julio/agosto",
+            "DESCRIPTION": None,
+            "PERCENT": 10,
+            "OTRO_DESCUENTO": None
+        },
+        {
+            "ID": 3,
+            "PROGRAM_VERSIONS_ID": 23,
+            "DISCOUNT_TYPES_ID": 1,
+            "NAME": "Ex-Alumnos USM",
+            "DESCRIPTION": "ser exalumno de la Universidad, cualquier título, grado o diplomas",
+            "PERCENT": 10,
+            "OTRO_DESCUENTO": None
+        },
+        {
+            "ID": 5,
+            "PROGRAM_VERSIONS_ID": 23,
+            "DISCOUNT_TYPES_ID": 10,
+            "NAME": "Pago contado",
+            "DESCRIPTION": None,
+            "PERCENT": 10,
+            "OTRO_DESCUENTO": None
+        }
+    ]
+}
