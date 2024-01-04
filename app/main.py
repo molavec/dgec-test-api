@@ -1,7 +1,8 @@
+from typing import Union
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 
-from datetime import date
+from datetime import date, datetime
 
 from pydantic import BaseModel
 
@@ -27,121 +28,129 @@ async def root():
 """
 
 
-class Section(BaseModel):
-  NAME: str
-  TEXT: str | None
-  PUBLISH: str | None
-  SEQ_NUMBER: int | None
-  FILE_NAME: str | None
-  BUTTON_TEXT: str | None
-  LINK: str | None
+class PUBLISHED_SECTION(BaseModel):
+  NAME: Union[str, None] = None
+  TEXT: Union[str, None] = None
+  PUBLISH: Union[str, None] = None
+  SEQ_NUMBER: Union[int, None] = None
+  FILE_NAME: Union[str, None] = None
+  BUTTON_TEXT: Union[str, None] = None
+  LINK: Union[str, None] = None
 
 
-class Director(BaseModel):
-  ID: int
-  PROGRAM_VERSIONS_ID: int
-  PEOPLE_TYPES_ID: int
-  NAME: str
-  BANNER_SPRIDEN_ID: str
-  FIRST_NAME: str
-  LAST_NAME: str
-  POSITION: str | None
-  SOCIAL_MEDIA_LINK: str | None
-  FILE_NAME: str | None
-  BUTTON_TEXT: str | None
-  TEXT: str | None
+class PUBLISHED_DIRECTOR(BaseModel):
+  ID: Union[int, None] = None
+  PROGRAM_VERSIONS_ID: Union[int, None] = None
+  PEOPLE_TYPES_ID: Union[int, None] = None
+  NAME: Union[str, None] = None
+  BANNER_SPRIDEN_ID: Union[str, None] = None
+  FIRST_NAME: Union[str, None] = None
+  LAST_NAME: Union[str, None] = None
+  POSITION: Union[str, None] = None
+  SOCIAL_MEDIA_LINK: Union[str, None] = None
+  FILE_NAME: Union[str, None] = None
+  BUTTON_TEXT: Union[str, None] = None
+  TEXT: Union[str, None] = None
 
 
-class Module(BaseModel):
-  ID: int
-  PROGRAM_PLANS_ID: int | None
-  SEQ_NUMBER: int
-  LEVEL_NUMBER: int | None
-  DESCRIPTION: str | None
-  HOURS: int | None
-  SIGA_MNEMONIC: int | None
-  SIGA_SCT_CREDIT: int | None
-  SIGA_PLAN_LEVEL: int | None
+# For Published Programs
+class PUBLISHED_MODULE(BaseModel):
+  ID: Union[int, None] = None
+  PROGRAM_PLANS_ID: Union[int, None] = None
+  SEQ_NUMBER: Union[int, None] = None
+  LEVEL_NUMBER: Union[str, None] = None
+  DESCRIPTION: Union[str, None] = None
+  HOURS: Union[int, None] = None
+  SIGA_MNEMONIC: Union[str, None] = None
+  SIGA_SCT_CREDIT: Union[int, None] = None
+  SIGA_PLAN_LEVEL: Union[int, None] = None
 
 
-class PaymentType(BaseModel):
-  ID: int
+class PUBLISHED_DISCOUNT(BaseModel):
+  ID: Union[int, None] = None
+  PROGRAM_VERSIONS_ID: Union[int, None] = None
+  DISCOUNT_TYPES_ID: Union[int, None] = None
+  NAME: Union[str, None] = None
+  DESCRIPTION: Union[str, None] = None
+  PERCENT: Union[int, None] = None
+  OTRO_DESCUENTO: Union[str, None] = None
 
 
-class Requirement(BaseModel):
-  ID: int
-  PROGRAM_VERSIONS_ID: int
-  REQUIREMENT_TYPES_ID: int
-  NAME: str
-  DESCRIPTION: str | None
+class PUBLISHED_PAYMENT_TYPE(BaseModel):
+  ID: Union[int, None] = None
+  PROGRAM_VERSIONS_ID: Union[int, None] = None
+  PAYMENT_TYPES_ID: Union[int, None] = None
+  NAME: Union[str, None] = None
+  VALUE: Union[int, None] = None
 
 
-class Discount(BaseModel):
-  ID: int
-  PROGRAM_VERSIONS_ID: int
-  DISCOUNT_TYPES_ID: int
-  NAME: str
-  DESCRIPTION: str | None
-  PERCENT: int | None
-  OTRO_DESCUENTO: int | None
+class PUBLISHED_REQUIREMENT(BaseModel):
+  ID: Union[int, None] = None
+  PROGRAM_VERSIONS_ID: Union[int, None] = None
+  REQUIREMENT_TYPES_ID: Union[int, None] = None
+  NAME: Union[str, None] = None
+  DESCRIPTION: Union[str, None] = None
 
 
-class Program(BaseModel):
-  PROGRAM_ID: int
-  PROGRAM_NAME: str
-  PROGRAM_DESC: str
-  SIGA_PROGRAM_CODE: int
-  BANNER_PROGRAM_CODE: None
-  BANNER_MAJR_CODE: None
-  PROGRAM_TYPES_ID: int
-  PROGRAM_TYPE_NAME: str
-  PUBLISH: str
-  IS_FEATURED: str | None
-  SIGA_PLAN_NAME: str | None
-  PROGRAM_VERSION_ID: int | None
-  IMPART_TYPES_ID: int
-  IMPART_TYPE_NAME: str
-  MODALITY_TYPES_ID: int
-  MODALITY_TYPE_NAME: str | None
-  MODALITY_TYPE_DESC: str | None
-  SIGA_COD_JORNADA: int
-  SIGA_COD_SEDE: int
-  SIGA_COD_DEPARTAMENTO: int
-  MEMO_AUTHORIZATION: str | None
-  NUMBER_VERSION: int
-  START_DATE: str | None
-  END_DATE: str | None
-  DURATION_VALUE: int | None
-  DURATION_TYPES_ID: int
-  DURATION_TYPE_NAME: str | None
-  DURATION_TEXT: str | None
-  SIGA_PERIOD: str | None
-  DGEC_CODE: str | None
-  QUOTAS: int
-  LEAST_ENROLLMENT_VALUE: int
-  PROGRAM_AMOUNT: int
-  REGISTRATION_AMOUNT: int
-  BANNER_ORGN_CODE: int | None
-  BANNER_DETAIL_CODE: int | None
-  DISTRIBUTION_PERCENT: int | None
-  DISCOUNT_TEXT: str | None
-  RECORD_STATE: str | None
-  SEND_DATE: str | None
-  PROGRAM_VALIDATION_STATE: int
-  VERSION_VALIDATION_STATE: int
-  SECTIONS: list[Section] = []
-  DIRECTORS: list[Director] = []
-  MODULES: list[Module] = []
-  PAYMENT_TYPES: list[PaymentType] = []
-  REQUIREMENTS: list[Requirement] = []
-  DISCOUNTS: list[Discount] = []
+class PROGRAM(BaseModel):
+  PROGRAM_ID: Union[int, None] = None
+  PROGRAM_NAME: Union[str, None] = None
+  PROGRAM_DESC: Union[str, None] = None
+  SIGA_PROGRAM_CODE: Union[int, None] = None
+  BANNER_PROGRAM_CODE: Union[str, None] = None
+  BANNER_MAJR_CODE: Union[str, None] = None
+  PROGRAM_TYPES_ID: Union[int, None] = None
+  PROGRAM_TYPE_NAME: Union[str, None] = None
+  PUBLISH: Union[str, None] = None
+  IS_FEATURED: Union[str, None] = None
+  SIGA_PLAN_NAME: Union[str, None] = None
+  PROGRAM_VERSION_ID: Union[int, None] = None
+  IMPART_TYPES_ID: Union[int, None] = None
+  IMPART_TYPE_NAME: Union[str, None] = None
+  MODALITY_TYPES_ID: Union[int, None] = None
+  MODALITY_TYPE_NAME: Union[str, None] = None
+  MODALITY_TYPE_DESC: Union[str, None] = None
+  SIGA_COD_JORNADA: Union[int, None] = None
+  SIGA_COD_SEDE: Union[int, None] = None
+  SIGA_COD_DEPARTAMENTO: Union[int, None] = None
+  MEMO_AUTHORIZATION: Union[str, None] = None
+  NUMBER_VERSION: Union[int, None] = None
+  START_DATE: Union[datetime, None] = None
+  END_DATE: Union[datetime, None] = None
+  DURATION_VALUE: Union[int, None] = None
+  DURATION_TYPES_ID: Union[int, None] = None
+  DURATION_TYPE_NAME: Union[str, None] = None
+  DURATION_TEXT: Union[str, None] = None
+  SIGA_PERIOD: Union[str, None] = None
+  DGEC_CODE: Union[str, None] = None
+  QUOTAS: Union[int, None] = None
+  LEAST_ENROLLMENT_VALUE: Union[int, None] = None
+  PROGRAM_AMOUNT: Union[int, None] = None
+  REGISTRATION_AMOUNT: Union[int, None] = None
+  BANNER_ORGN_CODE: Union[str, None] = None
+  BANNER_DETAIL_CODE: Union[str, None] = None
+  DISTRIBUTION_PERCENT: Union[str, None] = None
+  DISCOUNT_TEXT: Union[str, None] = None
+  RECORD_STATE: Union[str, None] = None
+  SEND_DATE: Union[datetime, None] = None
+  PROGRAM_VALIDATION_STATE: Union[int, None] = None
+  VERSION_VALIDATION_STATE: Union[int, None] = None
+  SECTIONS: Union[list[PUBLISHED_SECTION], None] = None
+  DIRECTORS: Union[list[PUBLISHED_DIRECTOR], None] = None
+  MODULES: Union[list[PUBLISHED_MODULE], None] = None
+  PAYMENT_TYPES: Union[list[PUBLISHED_PAYMENT_TYPE], None] = None
+  REQUIREMENTS: Union[list[PUBLISHED_REQUIREMENT], None] = None
+  DISCOUNTS: Union[list[PUBLISHED_DISCOUNT], None] = None
 
 
-@app.get("/programs/")
-async def programs() -> list[Program]:
-  return programsData.programs
+@app.get("/programs/published")
+async def programs(type: int = 0) -> list[PROGRAM]:
+  if type == 1:
+    return programsData.courses
+  else:
+    return programsData.diplomas
 
 
-@app.get("/programs/{itemId}")
-async def programs(itemId: int) -> Program:
+@app.get("/program/published/{itemId}")
+async def programs() -> PROGRAM:
   return programsData.program
