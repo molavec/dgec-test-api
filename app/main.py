@@ -154,3 +154,243 @@ async def programs(type: int = 0) -> list[PROGRAM]:
 @app.get("/program/published/{itemId}")
 async def programs() -> PROGRAM:
   return programsData.program
+
+
+@app.get("/diu_vesp")
+async def duiVesp():
+  return [
+      {
+          "COD_JORNADA": 1,
+          "NOM_JORNADA": "Diurno"
+      },
+      {
+          "COD_JORNADA": 2,
+          "NOM_JORNADA": "Vespertino"
+      }
+  ]
+
+
+@app.get("/campuses")
+async def campuses():
+  return [
+      {
+          "COD_SEDE": 1,
+          "NOM_SEDE": "Casa Central Valparaíso"
+      },
+      {
+          "COD_SEDE": 4,
+          "NOM_SEDE": "Concepción  "
+      },
+      {
+          "COD_SEDE": 7,
+          "NOM_SEDE": "Santiago San Joaquín"
+      },
+      {
+          "COD_SEDE": 2,
+          "NOM_SEDE": "Santiago Vitacura"
+      },
+      {
+          "COD_SEDE": 3,
+          "NOM_SEDE": "Viña del Mar  "
+      }
+  ]
+
+
+@app.get("/deparments")
+async def deparments():
+  return [
+      {
+          "COD_DEPARTAMENTO": 103,
+          "NOM_DEPARTAMENTO": "AERONÁUTICA"
+      },
+      {
+          "COD_DEPARTAMENTO": 16,
+          "NOM_DEPARTAMENTO": "ARQUITECTURA"
+      },
+      {
+          "COD_DEPARTAMENTO": 20,
+          "NOM_DEPARTAMENTO": "BIOTECNOLOGIA"
+      },
+      {
+          "COD_DEPARTAMENTO": 313,
+          "NOM_DEPARTAMENTO": "CIENCIAS, Concepción"
+      },
+      {
+          "COD_DEPARTAMENTO": 225,
+          "NOM_DEPARTAMENTO": "CIENCIAS, Viña del Mar"
+      },
+      {
+          "COD_DEPARTAMENTO": 255,
+          "NOM_DEPARTAMENTO": "CONSTRUCCIÓN Y PREVENCIÓN DE RIESGOS, Concepción"
+      },
+      {
+          "COD_DEPARTAMENTO": 209,
+          "NOM_DEPARTAMENTO": "CONSTRUCCIÓN Y PREVENCIÓN DE RIESGOS, Viña del Mar"
+      },
+      {
+          "COD_DEPARTAMENTO": 41,
+          "NOM_DEPARTAMENTO": "DEFIDER"
+      },
+      {
+          "COD_DEPARTAMENTO": 114,
+          "NOM_DEPARTAMENTO": "DIREC. GRAL. DE INVESTIG. INNOV. Y EMPRENDIMIENTO"
+      },
+      {
+          "COD_DEPARTAMENTO": 9,
+          "NOM_DEPARTAMENTO": "DIRECCION GENERAL DE DOCENCIA"
+      },
+      {
+          "COD_DEPARTAMENTO": 320,
+          "NOM_DEPARTAMENTO": "DIRECCIÓN ACADÉMICA"
+      },
+      {
+          "COD_DEPARTAMENTO": 45,
+          "NOM_DEPARTAMENTO": "DIRECCIÓN DE ENSEÑANZA Y APRENDIZAJE"
+      },
+      {
+          "COD_DEPARTAMENTO": 94,
+          "NOM_DEPARTAMENTO": "DIRECCIÓN DE ESTUDIOS"
+      },
+      {
+          "COD_DEPARTAMENTO": 25,
+          "NOM_DEPARTAMENTO": "DIRECCIÓN DE POSTGRADO Y PROGRAMAS"
+      },
+      {
+          "COD_DEPARTAMENTO": 101,
+          "NOM_DEPARTAMENTO": "DIRECCIÓN GENERAL DE ASISTENCIA TÉCNICA"
+      },
+      {
+          "COD_DEPARTAMENTO": 226,
+          "NOM_DEPARTAMENTO": "DISEÑO Y MANUFACTURA"
+      },
+      {
+          "COD_DEPARTAMENTO": 256,
+          "NOM_DEPARTAMENTO": "ELECTRICIDAD"
+      },
+      {
+          "COD_DEPARTAMENTO": 210,
+          "NOM_DEPARTAMENTO": "ELECTROTECNIA E INFORMÁTICA"
+      },
+      {
+          "COD_DEPARTAMENTO": 12,
+          "NOM_DEPARTAMENTO": "ELECTRÓNICA"
+      },
+      {
+          "COD_DEPARTAMENTO": 257,
+          "NOM_DEPARTAMENTO": "ELECTRÓNICA E INFORMÁTICA"
+      },
+      {
+          "COD_DEPARTAMENTO": 31,
+          "NOM_DEPARTAMENTO": "ESTUDIOS HUMANÍSTICOS"
+      },
+      {
+          "COD_DEPARTAMENTO": 21,
+          "NOM_DEPARTAMENTO": "FÍSICA"
+      },
+      {
+          "COD_DEPARTAMENTO": 15,
+          "NOM_DEPARTAMENTO": "INDUSTRIAS"
+      },
+      {
+          "COD_DEPARTAMENTO": 18,
+          "NOM_DEPARTAMENTO": "INFORMÁTICA"
+      },
+      {
+          "COD_DEPARTAMENTO": 26,
+          "NOM_DEPARTAMENTO": "INGENIERÍA COMERCIAL"
+      },
+      {
+          "COD_DEPARTAMENTO": 13,
+          "NOM_DEPARTAMENTO": "INGENIERÍA ELÉCTRICA"
+      },
+      {
+          "COD_DEPARTAMENTO": 112,
+          "NOM_DEPARTAMENTO": "INGENIERÍA EN DISEÑO"
+      },
+      {
+          "COD_DEPARTAMENTO": 14,
+          "NOM_DEPARTAMENTO": "INGENIERÍA MECÁNICA"
+      },
+      {
+          "COD_DEPARTAMENTO": 17,
+          "NOM_DEPARTAMENTO": "INGENIERÍA METALÚRGICA Y DE MATERIALES"
+      },
+      {
+          "COD_DEPARTAMENTO": 19,
+          "NOM_DEPARTAMENTO": "INGENIERÍA QUÍMICA Y AMBIENTAL"
+      },
+      {
+          "COD_DEPARTAMENTO": 49,
+          "NOM_DEPARTAMENTO": "INSTITUTO INTERNACIONAL PARA LA INNOVACIÓN EMPRESA"
+      },
+      {
+          "COD_DEPARTAMENTO": 22,
+          "NOM_DEPARTAMENTO": "MATEMÁTICA"
+      },
+      {
+          "COD_DEPARTAMENTO": 258,
+          "NOM_DEPARTAMENTO": "MECÁNICA, Concepción"
+      },
+      {
+          "COD_DEPARTAMENTO": 204,
+          "NOM_DEPARTAMENTO": "MECÁNICA, Viña del Mar"
+      },
+      {
+          "COD_DEPARTAMENTO": 11,
+          "NOM_DEPARTAMENTO": "OBRAS CIVILES"
+      },
+      {
+          "COD_DEPARTAMENTO": 51,
+          "NOM_DEPARTAMENTO": "PROMOCIÓN UNIVERSITARIA"
+      },
+      {
+          "COD_DEPARTAMENTO": 23,
+          "NOM_DEPARTAMENTO": "QUÍMICA"
+      },
+      {
+          "COD_DEPARTAMENTO": 259,
+          "NOM_DEPARTAMENTO": "QUÍMICA Y MEDIO AMBIENTE, Concepción"
+      },
+      {
+          "COD_DEPARTAMENTO": 211,
+          "NOM_DEPARTAMENTO": "QUÍMICA Y MEDIO AMBIENTE, Viña del Mar"
+      },
+      {
+          "COD_DEPARTAMENTO": 206,
+          "NOM_DEPARTAMENTO": "SECRETARÍA ACADÉMICA"
+      },
+      {
+          "COD_DEPARTAMENTO": 316,
+          "NOM_DEPARTAMENTO": "SIDERO METAL CONCEPCIÓN"
+      },
+      {
+          "COD_DEPARTAMENTO": 317,
+          "NOM_DEPARTAMENTO": "TÉCNICA CONCEPCIÓN"
+      },
+      {
+          "COD_DEPARTAMENTO": 319,
+          "NOM_DEPARTAMENTO": "UNIDAD DE PROGRAMAS ESPECIALES"
+      },
+      {
+          "COD_DEPARTAMENTO": 10,
+          "NOM_DEPARTAMENTO": "VICERREACTORÍA ACADÉMICA"
+      }
+  ]
+
+
+@app.get("/modalities")
+async def modalities():
+  return [
+      {
+          "ID": 1,
+          "NAME": "Profesional"
+      },
+      {
+          "ID": 2,
+          "NAME": "Online"
+      },
+      {
+          "ID": 3,
+          "NAME": "Híbrida"
+      }
+  ]
