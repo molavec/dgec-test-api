@@ -156,23 +156,9 @@ async def programs() -> PROGRAM:
   return programsData.program
 
 
-@app.get("/diu_vesp")
-async def duiVesp():
-  return [
-      {
-          "COD_JORNADA": 1,
-          "NOM_JORNADA": "Diurno"
-      },
-      {
-          "COD_JORNADA": 2,
-          "NOM_JORNADA": "Vespertino"
-      }
-  ]
-
-
 @app.get("/campuses")
 async def campuses():
-  return [
+  campuses = [
       {
           "COD_SEDE": 1,
           "NOM_SEDE": "Casa Central Valparaíso"
@@ -194,11 +180,12 @@ async def campuses():
           "NOM_SEDE": "Viña del Mar  "
       }
   ]
+  return campuses
 
 
 @app.get("/deparments")
 async def deparments():
-  return [
+  deparments = [
       {
           "COD_DEPARTAMENTO": 103,
           "NOM_DEPARTAMENTO": "AERONÁUTICA"
@@ -376,11 +363,27 @@ async def deparments():
           "NOM_DEPARTAMENTO": "VICERREACTORÍA ACADÉMICA"
       }
   ]
+  return deparments
+
+
+@app.get("/diu_vesp")
+async def diuVesp():
+  jornada = [
+      {
+          "COD_JORNADA": 1,
+          "NOM_JORNADA": "Diurno"
+      },
+      {
+          "COD_JORNADA": 2,
+          "NOM_JORNADA": "Vespertino"
+      }
+  ]
+  return jornada
 
 
 @app.get("/modalities")
 async def modalities():
-  return [
+  modalities = [
       {
           "ID": 1,
           "NAME": "Profesional"
@@ -394,3 +397,4 @@ async def modalities():
           "NAME": "Híbrida"
       }
   ]
+  return modalities
