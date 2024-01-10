@@ -110,9 +110,12 @@ class PROGRAM(BaseModel):
   MODALITY_TYPES_ID: Union[int, None] = None
   MODALITY_TYPE_NAME: Union[str, None] = None
   MODALITY_TYPE_DESC: Union[str, None] = None
-  SIGA_COD_JORNADA: Union[int, None] = None
-  SIGA_COD_SEDE: Union[int, None] = None
-  SIGA_COD_DEPARTAMENTO: Union[int, None] = None
+  SIGA_COD_JORNADA: Union[int, None] = None,
+  SIGA_NOM_JORNADA: Union[str, None] = None,
+  SIGA_COD_SEDE: Union[int, None] = None,
+  SIGA_NOM_SEDE: Union[str, None] = None,
+  SIGA_COD_DEPARTAMENTO: Union[int, None] = None,
+  SIGA_NOM_DEPARTAMENTO: Union[str, None] = None,
   MEMO_AUTHORIZATION: Union[str, None] = None
   NUMBER_VERSION: Union[int, None] = None
   START_DATE: Union[datetime, None] = None
