@@ -135,6 +135,7 @@ class PROGRAM(BaseModel):
   SEND_DATE: Union[datetime, None] = None
   PROGRAM_VALIDATION_STATE: Union[int, None] = None
   VERSION_VALIDATION_STATE: Union[int, None] = None
+  METADATA: Union[object, None] = None,
   SECTIONS: Union[list[PUBLISHED_SECTION], None] = None
   DIRECTORS: Union[list[PUBLISHED_DIRECTOR], None] = None
   MODULES: Union[list[PUBLISHED_MODULE], None] = None
