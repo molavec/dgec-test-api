@@ -577,7 +577,7 @@ program = {
             "FIRST_NAME": "Marcelo",
             "LAST_NAME": "Quiroz Neira",
             "POSITION": None,
-            "SOCIAL_MEDIA_LINK": None,
+            "SOCIAL_MEDIA_LINK": 'https://www.linkedin.com/in/molavec/',
             "FILE_NAME": None,
             "BUTTON_TEXT": None,
             "TEXT": "<p>El mantenimiento es una de las actividades que influye directamente en la producción, en los costos globales de la actividad productiva, en los clientes, en la seguridad y en el medio ambiente.</p><p>&nbsp;</p><p>La integridad Mecánica es el proceso de garantizar que los equipos sean fabricados con los materiales adecuados de construcción y, además, sean correctamente instalados, mantenidos y reemplazados para evitar fallas y daños ambientales.</p>"
