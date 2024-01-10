@@ -184,7 +184,7 @@ async def campuses():
   return campuses
 
 
-@app.get("/deparments")
+@app.get("/departments")
 async def deparments():
   deparments = [
       {
