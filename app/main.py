@@ -146,6 +146,8 @@ class PROGRAM(BaseModel):
   REQUIREMENTS: Union[list[PUBLISHED_REQUIREMENT], None] = None
   DISCOUNTS: Union[list[PUBLISHED_DISCOUNT], None] = None
 
+# list
+
 
 @app.get("/programs/published")
 async def programs(type: int = 0) -> list[PROGRAM]:
@@ -154,10 +156,22 @@ async def programs(type: int = 0) -> list[PROGRAM]:
   else:
     return programsData.diplomas
 
+# program
+
 
 @app.get("/program/published/{itemId}")
 async def programs() -> PROGRAM:
   return programsData.program
+
+# search
+
+
+@app.get("/program/published")
+async def programs(search_term: str = '') -> list[PROGRAM]:
+  if search_term == '':
+    return programsData.search
+  else:
+    return []
 
 
 @app.get("/campuses")
