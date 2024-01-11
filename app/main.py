@@ -168,7 +168,7 @@ async def programs() -> PROGRAM:
 
 @app.get("/program/published")
 async def programs(search_term: str = '') -> list[PROGRAM]:
-  if search_term == '':
+  if search_term != '':
     return programsData.search
   else:
     return []
