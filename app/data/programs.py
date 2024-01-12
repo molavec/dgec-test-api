@@ -687,7 +687,7 @@ program = {
             "ID": 2,
             "PROGRAM_VERSIONS_ID": 23,
             "DISCOUNT_TYPES_ID": 2,
-            "NAME": "10%",
+            "NOMBRE_DESCUENTO": "10%",
             "DESCRIPTION": None,
             "PERCENT": 10,
             "NOMBRE_DESCUENTO": "Empresa"
@@ -696,7 +696,7 @@ program = {
             "ID": 3,
             "PROGRAM_VERSIONS_ID": 23,
             "DISCOUNT_TYPES_ID": 3,
-            "NAME": "20%",
+            "NOMBRE_DESCUENTO": "20%",
             "DESCRIPTION": None,
             "PERCENT": 20,
             "NOMBRE_DESCUENTO": "Funcionarios USM"
@@ -705,7 +705,7 @@ program = {
             "ID": 4,
             "PROGRAM_VERSIONS_ID": 23,
             "DISCOUNT_TYPES_ID": 4,
-            "NAME": "30%",
+            "NOMBRE_DESCUENTO": "30%",
             "DESCRIPTION": None,
             "PERCENT": 30,
             "NOMBRE_DESCUENTO": "Mujeres"
@@ -714,7 +714,7 @@ program = {
             "ID": 1,
             "PROGRAM_VERSIONS_ID": 23,
             "DISCOUNT_TYPES_ID": 1,
-            "NAME": "5%",
+            "NOMBRE_DESCUENTO": "5%",
             "DESCRIPTION": None,
             "PERCENT": 5,
             "NOMBRE_DESCUENTO": "Ex-Alumnos USM"

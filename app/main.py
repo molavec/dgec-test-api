@@ -70,7 +70,7 @@ class PUBLISHED_DISCOUNT(BaseModel):
   ID: Union[int, None] = None
   PROGRAM_VERSIONS_ID: Union[int, None] = None
   DISCOUNT_TYPES_ID: Union[int, None] = None
-  NAME: Union[str, None] = None
+  NOMBRE_DESCUENTO: Union[str, None] = None
   DESCRIPTION: Union[str, None] = None
   PERCENT: Union[int, None] = None
   OTRO_DESCUENTO: Union[str, None] = None
